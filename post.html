@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Meta & Fonts -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post an Event — Pinboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Background noise overlay -->
+  <div class="noise"></div>
+  <!-- Global header / navigation -->
+  <header class="glass app-header">
+    <div class="brand">
+      <span class="logo">PH</span>
+      <a href="./index.html" class="brand-name">Pinboard</a>
+    </div>
+    <nav class="nav">
+      <a href="./events.html" class="nav-link">Explore</a>
+      <a href="./post.html" class="nav-cta btn btn-primary active">Post an Event</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main class="container">
+    <!-- Event submission form -->
+    <section class="glass form-card">
+      <h1>Post an Event</h1>
+      <form id="post-form" class="form-grid">
+        <label class="field">
+          <span>Event name</span>
+          <input class="input" name="title" required maxlength="80" placeholder="e.g., Summer Night Market" />
+        </label>
+        <label class="field">
+          <span>Description</span>
+          <textarea class="input" name="description" rows="5" required placeholder="Describe your event"></textarea>
+        </label>
+        <div class="grid-2">
+          <label class="field">
+            <span>Date</span>
+            <input class="input" name="date" type="text" placeholder="YYYY-MM-DD" required data-datepicker />
+          </label>
+          <label class="field">
+            <span>Time</span>
+            <input class="input" name="time" type="text" placeholder="HH:MM" required data-timepicker />
+          </label>
+        </div>
+        <div class="grid-2">
+          <label class="field">
+            <span>Location</span>
+            <input class="input" name="location" required placeholder="City, Venue" />
+          </label>
+          <label class="field">
+            <span>Category</span>
+            <select class="input" name="category" required>
+              <option>Music</option>
+              <option>Food</option>
+              <option>Arts</option>
+              <option>Outdoors</option>
+              <option>Tech</option>
+            </select>
+          </label>
+        </div>
+        <label class="field">
+          <span>Host contact (email)</span>
+          <input class="input" type="email" name="contact" required placeholder="you@example.com" />
+        </label>
+        <label class="field file">
+          <span>Image</span>
+          <input class="input" type="file" name="image" accept="image/*" />
+        </label>
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Submit Event</button>
+          <a class="btn btn-ghost" href="./index.html">Cancel</a>
+        </div>
+      </form>
+      <p class="hint">This demo stores your event locally and shows it instantly.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer container">
+    <div class="glass footer-inner">
+      <p>© <span id="year"></span> Pinboard.</p>
+      <div class="footer-links">
+        <a href="./events.html">Explore</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile glass menu -->
+  <div class="menu-overlay" id="menu-overlay" aria-hidden="true"></div>
+  <aside class="menu-panel" id="menu-panel" aria-hidden="true" hidden>
+    <nav class="menu-list">
+      <a class="menu-link" href="./index.html">Home</a>
+      <a class="menu-link" href="./events.html">Explore</a>
+      <a class="menu-link" href="./post.html">Post an Event</a>
+    </nav>
+  </aside>
+
+  <!-- App scripts -->
+  <script src="./app.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Meta & Fonts -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event — Pinboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Background noise overlay -->
+  <div class="noise"></div>
+  <!-- Global header / navigation -->
+  <header class="glass app-header">
+    <div class="brand">
+      <span class="logo">◎</span>
+      <a href="./index.html" class="brand-name">Pinboard</a>
+    </div>
+    <nav class="nav">
+      <a href="./events.html" class="nav-link">Explore</a>
+      <a href="./post.html" class="nav-cta btn btn-primary">Post an Event</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main class="container">
+    <!-- Event detail -->
+    <article id="event-detail" class="event-detail glass">
+      <div class="event-hero">
+        <img id="event-image" alt="Event image" />
+      </div>
+      <div class="event-body">
+        <h1 id="event-title"></h1>
+        <div class="meta">
+          <span id="event-date" class="chip"></span>
+          <span id="event-time" class="chip"></span>
+          <span id="event-location" class="chip"></span>
+          <span id="event-category" class="chip"></span>
+        </div>
+        <p id="event-description" class="event-description"></p>
+
+        <div class="event-actions">
+          <button id="rsvp-btn" class="btn btn-primary">RSVP</button>
+          <button id="share-btn" class="btn btn-gloss">Share</button>
+        </div>
+
+        <!-- Location & host info -->
+        <section class="map-section">
+          <h2>Location</h2>
+          <div class="map-embed">
+            <iframe id="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <div class="host">
+            <h3>Host</h3>
+            <p id="event-host">Contact: <a id="event-contact" href="#"></a></p>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer container">
+    <div class="glass footer-inner">
+      <p>© <span id="year"></span> Pinboard.</p>
+      <div class="footer-links">
+        <a href="./events.html">Explore</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile glass menu -->
+  <div class="menu-overlay" id="menu-overlay" aria-hidden="true"></div>
+  <aside class="menu-panel" id="menu-panel" aria-hidden="true" hidden>
+    <nav class="menu-list">
+      <a class="menu-link" href="./index.html">Home</a>
+      <a class="menu-link" href="./events.html">Explore</a>
+      <a class="menu-link" href="./post.html">Post an Event</a>
+    </nav>
+  </aside>
+
+  <!-- App scripts -->
+  <script src="./app.js"></script>
+</body>
+</html>
+
+
